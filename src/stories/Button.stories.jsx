@@ -1,12 +1,12 @@
-import React from 'react';
-
-import { Button } from './Button';
+import React from "react";
+import { AiFillBug } from "react-icons/ai";
+import { Button } from "./Button";
 
 export default {
-  title: 'Example/Button',
+  title: "Example/Button",
   component: Button,
   argTypes: {
-    backgroundColor: { control: 'color' },
+    backgroundColor: { control: "color" },
   },
 };
 
@@ -14,23 +14,25 @@ const Template = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  primary: true,
-  label: 'Button',
+  type: "primary",
+  label: "Button",
+  icon: <AiFillBug />,
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  label: 'Button',
+  type: "secondary",
+  label: "Button",
 };
 
 export const Large = Template.bind({});
 Large.args = {
-  size: 'large',
-  label: 'Button',
+  size: "large",
+  label: "Button",
 };
 
 export const Small = Template.bind({});
 Small.args = {
-  size: 'small',
-  label: 'Button',
+  size: "small",
+  label: "Button",
 };
