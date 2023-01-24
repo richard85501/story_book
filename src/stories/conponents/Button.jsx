@@ -10,6 +10,7 @@ export const Button = ({
   onClick,
   icon,
   iconPlace,
+  disabled,
   ...props
 }) => {
   Button.propTypes = {
@@ -41,6 +42,10 @@ export const Button = ({
      * where icon be
      */
     iconPlace: PropTypes.oneOf(["before", "after"]),
+    /**
+     * Button disabled
+     */
+    disabled: PropTypes.bool,
   };
 
   Button.defaultProps = {
@@ -50,12 +55,14 @@ export const Button = ({
     type: "primary",
     icon: null,
     iconPlace: icon ? "before" : null,
+    disabled: false,
   };
 
   const buttonStyles = () => {
     let className = styles[`storybook-button`];
     if (size) className += " " + styles[`storybook-button--${size}`];
     if (type) className += " " + styles[`storybook-button--${type}`];
+    if (disabled) className += " " + styles[`storybook-button--disabled`];
     return className;
   };
 
@@ -63,7 +70,7 @@ export const Button = ({
     <button
       type="button"
       className={buttonStyles()}
-      onClick={(e) => onClick(e)}
+      onClick={(e) => !disabled && onClick(e)}
       style={backgroundColor && { backgroundColor }}
       {...props}
     >

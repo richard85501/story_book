@@ -23,7 +23,7 @@ Primary.args = {
 export const Secondary = Template.bind({});
 Secondary.args = {
   type: "secondary",
-  label: "Button",
+  size: "pureIcon",
   icon: <AiFillBug />,
 };
 
@@ -32,6 +32,14 @@ Large.args = {
   size: "large",
   label: "Button",
   icon: <AiFillBug />,
+};
+
+export const disabled = Template.bind({});
+disabled.args = {
+  size: "large",
+  label: "Button",
+  icon: <AiFillBug />,
+  disabled: true,
 };
 
 // export const Small = Template.bind({});

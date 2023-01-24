@@ -8,6 +8,7 @@
   line-height: 1;
   transition: 0.3s;
 }
+
 .storybook-button {
   &--primary {
     color: white;
@@ -34,10 +35,8 @@
     }
   }
 }
+
 .storybook-button {
-  &--pureIcon {
-    padding: 3px;
-  }
   &--small {
     font-size: 12px;
     padding: 10px 16px;
@@ -49,5 +48,13 @@
   &--large {
     font-size: 16px;
     padding: 12px 24px;
+  }
+  &--pureIcon {
+    padding: 3px;
+  }
+  &--disabled {
+    background-color: gray;
+    color: white;
+    pointer-events: none;
   }
 }
