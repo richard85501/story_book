@@ -20,7 +20,7 @@ export const Button = ({
     /**
      * How large should the button be?
      */
-    size: PropTypes.oneOf(["small", "medium", "large"]),
+    size: PropTypes.oneOf(["small", "medium", "large", "pureIcon"]),
     /**
      * Button contents
      */
@@ -63,6 +63,7 @@ export const Button = ({
     <button
       type="button"
       className={buttonStyles()}
+      onClick={(e) => onClick(e)}
       style={backgroundColor && { backgroundColor }}
       {...props}
     >

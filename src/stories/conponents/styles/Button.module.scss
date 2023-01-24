@@ -6,24 +6,38 @@
   cursor: pointer;
   display: inline-block;
   line-height: 1;
+  transition: 0.3s;
 }
 .storybook-button {
   &--primary {
     color: white;
     background-color: #1ea7fd;
+    &:hover {
+      background-color: #0e4f77;
+    }
   }
   &--secondary {
     color: #333;
     background-color: transparent;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+    border-radius: 3px;
+    border: 0px;
+    &:hover {
+      background-color: #d2dfe7;
+    }
   }
   &--tertiary {
     color: #ffffff;
-    background-color: green;
+    background-color: rgb(77, 155, 77);
     box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+    &:hover {
+      background-color: rgb(11, 97, 11);
+    }
   }
 }
 .storybook-button {
+  &--pureIcon {
+    padding: 3px;
+  }
   &--small {
     font-size: 12px;
     padding: 10px 16px;
