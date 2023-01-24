@@ -61,7 +61,6 @@ export const Button = ({
     let className = styles[`storybook-button`];
     if (size) className += " " + styles[`storybook-button--${size}`];
     if (type) className += " " + styles[`storybook-button--${type}`];
-    console.log(className);
     return className;
   };
 
