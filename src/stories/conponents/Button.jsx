@@ -1,11 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-// import "./button.css";
-import styles from "./button.module.scss";
+import styles from "./styles/Button.module.scss";
 
-/**
- * Primary UI component for user interaction
- */
 export const Button = ({
   backgroundColor,
   size,
@@ -40,7 +36,7 @@ export const Button = ({
     /**
      * where icon be
      */
-    icon: PropTypes.node,
+    icon: PropTypes.object,
     /**
      * where icon be
      */

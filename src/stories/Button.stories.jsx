@@ -1,6 +1,6 @@
 import React from "react";
 import { AiFillBug } from "react-icons/ai";
-import { Button } from "./Button";
+import { Button } from "./conponents/Button";
 
 export default {
   title: "Example/Button",
