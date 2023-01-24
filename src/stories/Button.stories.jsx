@@ -16,6 +16,7 @@ export const Primary = Template.bind({});
 Primary.args = {
   type: "primary",
   label: "Button",
+  size: "medium",
   icon: <AiFillBug />,
 };
 

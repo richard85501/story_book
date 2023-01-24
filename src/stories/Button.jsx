@@ -49,7 +49,6 @@ export const Button = ({
 
   Button.defaultProps = {
     backgroundColor: null,
-    primary: false,
     size: "medium",
     onClick: undefined,
     type: "primary",
