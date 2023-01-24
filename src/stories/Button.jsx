@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./button.css";
+// import "./button.css";
+import styles from "./button.module.scss";
 
 /**
  * Primary UI component for user interaction
@@ -56,20 +57,30 @@ export const Button = ({
     iconPlace: icon ? "before" : null,
   };
 
+  const buttonStyles = () => {
+    let className = styles[`storybook-button`];
+    if (size) className += " " + styles[`storybook-button--${size}`];
+    if (type) className += " " + styles[`storybook-button--${type}`];
+    console.log(className);
+    return className;
+  };
+
   return (
     <button
       type="button"
-      className={[
-        "storybook-button",
-        `storybook-button--${size}`,
-        `storybook-button--${type}`,
-      ].join(" ")}
+      className={buttonStyles()}
       style={backgroundColor && { backgroundColor }}
       {...props}
     >
-      {iconPlace === "before" && icon}
-      {label}
-      {iconPlace === "after" && icon}
+      {iconPlace === "before" ? (
+        <>
+          {icon} {label}
+        </>
+      ) : (
+        <>
+          {label} {icon}
+        </>
+      )}
     </button>
   );
 };
